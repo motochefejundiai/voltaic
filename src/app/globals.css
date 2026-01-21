@@ -3,68 +3,68 @@
 @tailwind utilities;
 
 body {
-  font-family: Oswald, sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #202020;
-    --card: #ffffff;
-    --card-foreground: #060606;
-    --popover: #ffffff;
-    --popover-foreground: #060606;
-    --primary: #dbb42c;
-    --primary-foreground: #f7f7f7;
-    --secondary: #f4f4f4;
-    --secondary-foreground: #171717;
-    --muted: #f4f4f4;
-    --muted-foreground: #737373;
-    --accent: #f4f4f4;
-    --accent-foreground: #171717;
-    --destructive: #f44336;
-    --destructive-foreground: #f7f7f7;
-    --border: #b5b5b5;
-    --input: #b5b5b5;
-    --ring: #060606;
-    --chart-1: #ff6f2b;
-    --chart-2: #2bc9c1;
-    --chart-3: #2a4e6d;
-    --chart-4: #f4c120;
-    --chart-5: #f4b031;
-    --radius: 0.5rem;
+    --background: #000000;
+    --foreground: #ffffff;
+    --card: #111111;
+    --card-foreground: #ffffff;
+    --popover: #111111;
+    --popover-foreground: #ffffff;
+    --primary: #fbbf24;
+    --primary-foreground: #000000;
+    --secondary: #f59e0b;
+    --secondary-foreground: #ffffff;
+    --muted: #222222;
+    --muted-foreground: #cccccc;
+    --accent: #fef3c7;
+    --accent-foreground: #000000;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #333333;
+    --input: #333333;
+    --ring: #fbbf24;
+    --chart-1: #fbbf24;
+    --chart-2: #f59e0b;
+    --chart-3: #d97706;
+    --chart-4: #92400e;
+    --chart-5: #78350f;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: #060606;
-    --foreground: #f7f7f7;
-    --card: #060606;
-    --card-foreground: #f7f7f7;
-    --popover: #060606;
-    --popover-foreground: #f7f7f7;
-    --primary: #f7f7f7;
-    --primary-foreground: #171717;
-    --secondary: #262626;
-    --secondary-foreground: #f7f7f7;
-    --muted: #262626;
-    --muted-foreground: #a0a0a0;
-    --accent: #262626;
-    --accent-foreground: #f7f7f7;
-    --destructive: #d64a1f;
-    --destructive-foreground: #f7f7f7;
-    --border: #262626;
-    --input: #262626;
-    --ring: #d3d3d3;
-    --chart-1: #3b82f6;
-    --chart-2: #1dbd85;
-    --chart-3: #e47c0f;
-    --chart-4: #9c6ab0;
-    --chart-5: #d64b9a;
+    --background: #ffffff;
+    --foreground: #000000;
+    --card: #f5f5f5;
+    --card-foreground: #000000;
+    --popover: #f5f5f5;
+    --popover-foreground: #000000;
+    --primary: #fbbf24;
+    --primary-foreground: #000000;
+    --secondary: #f59e0b;
+    --secondary-foreground: #ffffff;
+    --muted: #e5e5e5;
+    --muted-foreground: #333333;
+    --accent: #fef3c7;
+    --accent-foreground: #000000;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --border: #cccccc;
+    --input: #cccccc;
+    --ring: #fbbf24;
+    --chart-1: #fbbf24;
+    --chart-2: #f59e0b;
+    --chart-3: #d97706;
+    --chart-4: #92400e;
+    --chart-5: #78350f;
   }
 }
 
 html {
-  background-color: var(--primary);
+  background: linear-gradient(135deg, #000000 0%, #111111 100%);
 }
 
 @layer base {
@@ -86,6 +86,25 @@ html {
 }
 .animate-fadeIn {
   animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes electricGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px #fbbf24,
+      0 0 10px #fbbf24,
+      0 0 15px #fbbf24;
+  }
+  50% {
+    box-shadow:
+      0 0 10px #fbbf24,
+      0 0 20px #fbbf24,
+      0 0 30px #fbbf24;
+  }
+}
+.animate-electricGlow {
+  animation: electricGlow 2s ease-in-out infinite;
 }
 
 @layer base {

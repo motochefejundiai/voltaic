@@ -25,10 +25,10 @@ function Header() {
           <Link href="/" className="flex items-center">
             <Image
               priority
-              width={80}
+              width={220}
               height={80}
               src="/logos/logo-white.png"
-              alt="Logo MotoChefe Jundiaí"
+              alt="Logo Voltaic"
               className="transition-transform transform hover:scale-105"
             />
           </Link>
@@ -37,7 +37,7 @@ function Header() {
               <Link
                 key={id}
                 href={href}
-                className="text-[#B5B5B5] uppercase font-bold text-sm tracking-wider relative group transition-all duration-300"
+                className="text-input uppercase font-bold text-sm tracking-wider relative group transition-all duration-300"
               >
                 {label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -46,14 +46,14 @@ function Header() {
           </nav>
           <Link
             target="_blank"
-            className="hidden md:flex text-white text-lg items-center px-6 py-3 rounded-full bg-[#25D366] transition-all duration-300 hover:scale-105 shadow-lg hover:bg-[#25D366]/90"
+            className="hidden md:flex text-foreground text-lg items-center px-6 py-3 rounded-full bg-[#25D366] transition-all duration-300 hover:scale-105 shadow-lg hover:bg-[#25D366]/90"
             href={whatsapp.main}
           >
             <Image height={30} width={30} alt="WhatsApp" src="/logos/whatsapp.png" />
             <span className="ml-2">Compre Agora</span>
           </Link>
           <button
-            className="md:hidden text-[#B5B5B5] p-2 rounded-lg focus:outline-none"
+            className="md:hidden text-input p-2 rounded-lg focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
@@ -77,7 +77,7 @@ function Header() {
               <Link
                 key={id}
                 href={href}
-                className="text-[#B5B5B5] text-2xl uppercase font-bold tracking-wider hover:text-primary transition-all duration-300"
+                className="text-accent text-2xl uppercase font-bold tracking-wider hover:text-primary transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 {label}
@@ -85,7 +85,7 @@ function Header() {
             ))}
             <Link
               target="_blank"
-              className="text-white text-xl flex gap-2 items-center p-4 rounded-lg bg-[#25D366] hover:scale-105 transition-all duration-300 hover:bg-[#25D366]/90"
+              className="text-foreground text-xl flex gap-2 items-center p-4 rounded-lg bg-[#25D366] hover:scale-105 transition-all duration-300 hover:bg-[#25D366]/90"
               href={whatsapp.main}
             >
               <Image height={30} width={30} alt="WhatsApp" src="/logos/whatsapp.png" />

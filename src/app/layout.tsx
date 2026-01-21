@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
-import { Oswald } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 import { appMetadata } from '@/constants/about'
 import './globals.css'
 import Header from './_components/header'
 import Script from 'next/script'
 import { socialMedia } from '@/constants/links'
 
-const oswaldSans = Oswald({
-  variable: '--font-oswald-sans',
+const interSans = Montserrat({
+  variable: '--font-inter-sans',
   subsets: ['latin'],
   display: 'swap'
 })
@@ -16,9 +16,10 @@ export const metadata: Metadata = {
   ...appMetadata,
   keywords: [
     'scoters elétricas',
-    'MotoChefe Jundiaí',
+    'Voltaic',
     'motos elétricas',
-    'bicicletas elétricas'
+    'bicicletas elétricas',
+    'scooters'
   ],
   alternates: {
     canonical: appMetadata.url
@@ -33,13 +34,13 @@ export const metadata: Metadata = {
         url: `${appMetadata.url}/capa.png`,
         width: 960,
         height: 1280,
-        alt: 'Capa do site MotoChefe Jundiaí'
+        alt: 'Capa do site Voltaic'
       },
       {
         url: `${appMetadata.url}/capa.png`,
         width: 1200,
         height: 630,
-        alt: 'Capa do site MotoChefe Jundiaí'
+        alt: 'Capa do site Voltaic'
       }
     ]
   },
@@ -84,14 +85,14 @@ export default function RootLayout({
         />
         {/* End Google Tag Manager */}
       </head>
-      <body className={`${oswaldSans.variable} antialiased relative`}>
+      <body className={`${interSans.variable} antialiased relative`}>
         <Header />
         {children}
         <Script id="seo-script" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            name: 'MotoChefe Jundiaí',
+            name: 'Voltaic',
             url: appMetadata.url,
             logo: `${appMetadata.url}/logos/logo-black.png`,
             sameAs: [

@@ -1,18 +1,18 @@
 export const whatsapp = {
-  main: 'https://wa.me/5511956085231'
+  main: 'https://wa.me/5519998739173'
 }
 
 export const socialMedia = {
   instagram: {
     name: 'Instagram',
     icon: '/logos/instagram.png',
-    link: 'https://www.instagram.com/motochefejundiai/',
+    link: 'https://www.instagram.com/voltaic.campinas/',
     alt: 'Instagram logo'
   },
   facebook: {
     name: 'Facebook',
     icon: '/logos/facebook.png',
-    link: 'https://www.facebook.com/motochefejundiai',
+    link: 'https://www.facebook.com/watch/voltaic.campinas/',
     alt: 'Facebook logo'
   },
   whatsapp: {

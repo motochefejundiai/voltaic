@@ -43,7 +43,7 @@ function Models() {
               )}
               <div
                 onClick={() => setSelectedModel(product)}
-                className="cursor-pointer absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/80 via-black/40 to-transparent text-foreground text-4xl font-bold px-6 pt-4 pb-14 z-10 flex items-end hover:from-primary/20 transition-all duration-300"
+                className="cursor-pointer absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/60 via-black/30 to-transparent text-foreground text-4xl font-bold px-6 pt-4 pb-14 z-10 flex items-end hover:from-primary/20 transition-all duration-300"
               >
                 {product.name}
               </div>
@@ -51,7 +51,7 @@ function Models() {
                 width={400}
                 height={300}
                 alt={`Modelo ${product.name}`}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-full transition-transform duration-300 group-hover:scale-105"
                 src={product.cover}
               />
               <Link
@@ -84,12 +84,12 @@ function Models() {
               />
             </div>
             <div className="lg:w-1/2 h-1/2 md:h-full flex flex-col space-y-4 overflow-auto px-4 py-2">
-              <DialogTitle className="text-4xl font-bold text-foreground border-b text-center md:text-left pb-4 pt-2">
+              <DialogTitle className="text-4xl font-bold text-input border-b border-primary text-center md:text-left pb-4 pt-2">
                 Especificações {selectedModel.name}
               </DialogTitle>
               <div className="space-y-2 px-2 lg:px-0">
                 {selectedModel.descriptions.map((description, index) => (
-                  <p key={index} className="text-xl text-foreground">
+                  <p key={index} className="text-xl text-input">
                     - {description}
                   </p>
                 ))}

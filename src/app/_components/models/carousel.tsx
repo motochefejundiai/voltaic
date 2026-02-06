@@ -28,8 +28,8 @@ function Carousel({ model, numberOfImages }: Props) {
         <SwiperSlide key={index}>
           <Image
             src={imgSrc}
-            width={600}
-            height={800}
+            fill
+            sizes="(max-width: 768px) 100vw, 100vh"
             alt={`Imagem ${index + 1} do modelo ${model}`}
             className="w-full h-full object-cover"
           />

@@ -30,9 +30,9 @@ function Carousel({ model, numberOfImages }: Props) {
             src={imgSrc}
             width={600}
             height={400}
-            aria-orientation="horizontal"
             alt={`Imagem ${index + 1} do modelo ${model}`}
             className="w-full h-full object-cover"
+            style={{ imageOrientation: 'from-image' }}
           />
         </SwiperSlide>
       ))}

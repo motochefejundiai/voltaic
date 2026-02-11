@@ -31,7 +31,7 @@ function Carousel({ model, numberOfImages }: Props) {
             width={600}
             height={400}
             alt={`Imagem ${index + 1} do modelo ${model}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover -rotate-90 md:rotate-0"
             style={{ imageOrientation: 'from-image' }}
           />
         </SwiperSlide>

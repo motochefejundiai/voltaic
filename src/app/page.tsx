@@ -4,6 +4,7 @@ const Videos = lazy(() => import('./_components/videos'))
 const About = lazy(() => import('./_components/about'))
 const Models = lazy(() => import('./_components/models'))
 const Quotes = lazy(() => import('./_components/quotes'))
+const Landscapes = lazy(() => import('./_components/landscapes'))
 const Footer = lazy(() => import('./_components/footer'))
 
 function Home() {
@@ -20,6 +21,9 @@ function Home() {
       </Suspense>
       <Suspense fallback={<div>Carregando Comentários...</div>}>
         <Quotes />
+      </Suspense>
+      <Suspense fallback={<div>Carregando Imagens...</div>}>
+        <Landscapes />
       </Suspense>
       <Suspense fallback={<div>Carregando Rodapé...</div>}>
         <Footer />

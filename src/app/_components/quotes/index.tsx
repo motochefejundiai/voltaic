@@ -55,7 +55,7 @@ const QuoteText = memo(function Quote({
 }) {
   return (
     <div
-      className={`relative w-full h-[400px] flex flex-col items-center justify-center p-6 ${className}`}
+      className={`relative w-full md:h-[400px] flex flex-col items-center justify-center p-6 ${className}`}
       aria-label={`Displaying quote ${index + 1}`}
     >
       <blockquote className="text-center text-3xl md:text-4xl font-semibold text-primary italic leading-relaxed mb-4">

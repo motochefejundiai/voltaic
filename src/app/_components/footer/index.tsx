@@ -6,7 +6,12 @@ const FOOTER_LINKS = [
   { label: 'Página Inicial', href: '/' },
   { label: 'Sobre Nós', href: '/#sobre' },
   { label: 'Motos', href: '/#modelos' },
-  { label: 'Contato', href: '/#contato' }
+  { label: 'Contato', href: '/#contato' },
+  {
+    label: 'Endereço',
+    href: 'https://maps.app.goo.gl/KHZ8su3GiRtJnivWA',
+    target: '_blank'
+  }
 ]
 
 function Footer() {
@@ -21,10 +26,11 @@ function Footer() {
             aria-label="Footer Navigation Links"
             className="flex flex-col md:flex-row items-center justify-center gap-6"
           >
-            {FOOTER_LINKS.map(({ label, href }) => (
+            {FOOTER_LINKS.map(({ label, href, target }) => (
               <Link
                 key={href}
                 href={href}
+                target={target}
                 className="text-lg hover:text-primary transition-all focus:outline-none focus:ring-2 focus:ring-primary rounded"
               >
                 {label}
@@ -38,6 +44,10 @@ function Footer() {
             width={220}
             height={120}
           />
+          <p className="text-lg">
+            Endereço: Av. Barão de Itapura, 2105 - Jardim Guanabara, Campinas - SP,
+            13073-300
+          </p>
           <div
             aria-label="Follow us on social media"
             className="flex justify-center md:justify-end gap-5"

@@ -11,7 +11,13 @@ const menus = [
   { id: 'home-menu', label: 'Página Inicial', href: '/' },
   { id: 'about-menu', label: 'Sobre Nós', href: '/#sobre' },
   { id: 'motorcycles-menu', label: 'Motos', href: '/#modelos' },
-  { id: 'contact-menu', label: 'Contato', href: '/#contato' }
+  { id: 'contact-menu', label: 'Contato', href: '/#contato' },
+  {
+    id: 'address-menu',
+    label: 'Endereço',
+    href: 'https://maps.app.goo.gl/KHZ8su3GiRtJnivWA',
+    target: '_blank'
+  }
 ]
 
 function Header() {
@@ -33,10 +39,11 @@ function Header() {
             />
           </Link>
           <nav className="hidden md:flex space-x-8">
-            {menus.map(({ id, label, href }) => (
+            {menus.map(({ id, label, href, target }) => (
               <Link
                 key={id}
                 href={href}
+                target={target}
                 className="text-input uppercase font-bold text-sm tracking-wider relative group transition-all duration-300"
               >
                 {label}
@@ -73,10 +80,11 @@ function Header() {
             className="flex flex-col items-center justify-center space-y-8"
             onClick={e => e.stopPropagation()}
           >
-            {menus.map(({ id, label, href }) => (
+            {menus.map(({ id, label, href, target }) => (
               <Link
                 key={id}
                 href={href}
+                target={target}
                 className="text-accent text-2xl uppercase font-bold tracking-wider hover:text-primary transition-all duration-300"
                 onClick={() => setIsOpen(false)}
               >
